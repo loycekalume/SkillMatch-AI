@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - SkillMatch AI</title>
+  <link rel="stylesheet" href="../home/home.component.css">
+  <link rel="stylesheet" href="jobseeker.component.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <img src="/placeholder.svg?height=40&width=40" alt="SkillMatch AI Logo">
+          <h2>SkillMatch AI</h2>
+        </div>
+        <button class="sidebar-close" id="sidebarClose">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="sidebar-content">
+        <nav class="sidebar-menu">
+          <ul>
+            <li class="active">
+              <a href="dashboard.html">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="jobs.html">
+                <i class="fas fa-briefcase"></i>
+                <span>Find Jobs</span>
+              </a>
+            </li>
+            <li>
+              <a href="applications.html">
+                <i class="fas fa-file-alt"></i>
+                <span>Applications</span>
+              </a>
+            </li>
+            <li>
+              <a href="profile.html">
+                <i class="fas fa-user"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="interviews.html">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Interviews</span>
+              </a>
+            </li>
+            <li>
+              <a href="messages.html">
+                <i class="fas fa-comments"></i>
+                <span>Messages</span>
+                <span class="badge">5</span>
+              </a>
+            </li>
+            <li>
+              <a href="ai-assistant.html">
+                <i class="fas fa-robot"></i>
+                <span>AI Assistant</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="sidebar-footer">
+        <a href="settings.html">
+          <i class="fas fa-cog"></i>
+          <span>Settings</span>
+        </a>
+        <a href="index.html">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="dashboard-header">
+        <div class="header-left">
+          <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h1>Dashboard</h1>
+        </div>
+        <div class="header-right">
+          <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search...">
+          </div>
+          <div class="notifications">
+            <button class="notification-btn">
+              <i class="fas fa-bell"></i>
+              <span class="notification-badge">3</span>
+            </button>
+          </div>
+          <div class="user-profile">
+            <div class="user-avatar">
+              <img src="/placeholder.svg?height=40&width=40" alt="User Avatar">
+            </div>
+            <div class="user-info">
+              <h4>John Doe</h4>
+              <p>Frontend Developer</p>
+            </div>
+            <button class="dropdown-toggle">
+              <i class="fas fa-chevron-down"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Content -->
+      <div class="dashboard-content">
+        <!-- Stats Cards -->
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="stat-info">
+              <h3>Profile Strength</h3>
+              <div class="stat-value">85%</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 85%;"></div>
+              </div>
+              <p>Complete your profile to increase visibility</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="stat-info">
+              <h3>Job Applications</h3>
+              <div class="stat-value">12</div>
+              <p>4 new applications this week</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="stat-info">
+              <h3>Interviews</h3>
+              <div class="stat-value">3</div>
+              <p>Next interview: Tomorrow, 10:00 AM</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <div class="stat-info">
+              <h3>Messages</h3>
+              <div class="stat-value">5</div>
+              <p>2 unread messages from recruiters</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Dashboard Sections -->
+        <div class="dashboard-grid">
+          <!-- AI Job Matches -->
+          <div class="dashboard-card job-matches">
+            <div class="card-header">
+              <h2>AI Job Matches</h2>
+              <a href="jobs.html" class="view-all">View All</a>
+            </div>
+            <div class="card-content">
+              <div class="job-cards">
+                <div class="job-card">
+                  <div class="job-header">
+                    <h3>Senior Frontend Developer</h3>
+                    <div class="match-badge">95% Match</div>
+                  </div>
+                  <div class="job-company">
+                    <img src="/placeholder.svg?height=30&width=30" alt="TechCorp Logo">
+                    <span>TechCorp</span>
+                  </div>
+                  <div class="job-details">
+                    <div class="job-location">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <span>San Francisco, CA (Remote)</span>
+                    </div>
+                    <div class="job-salary">
+                      <i class="fas fa-dollar-sign"></i>
+                      <span>$120K - $150K</span>
+                    </div>
+                  </div>
+                  <div class="job-skills">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">Next.js</span>
+                    <span class="skill-tag">UI/UX</span>
+                  </div>
+                  <div class="job-footer">
+                    <span class="job-posted">Posted 2 days ago</span>
+                    <button class="btn btn-primary btn-sm">Apply</button>
+                  </div>
+                </div>
+                <div class="job-card">
+                  <div class="job-header">
+                    <h3>Full Stack Engineer</h3>
+                    <div class="match-badge">88% Match</div>
+                  </div>
+                  <div class="job-company">
+                    <img src="/placeholder.svg?height=30&width=30" alt="InnovateTech Logo">
+                    <span>InnovateTech</span>
+                  </div>
+                  <div class="job-details">
+                    <div class="job-location">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <span>New York, NY (Hybrid)</span>
+                    </div>
+                    <div class="job-salary">
+                      <i class="fas fa-dollar-sign"></i>
+                      <span>$110K - $140K</span>
+                    </div>
+                  </div>
+                  <div class="job-skills">
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">AWS</span>
+                  </div>
+                  <div class="job-footer">
+                    <span class="job-posted">Posted 1 week ago</span>
+                    <button class="btn btn-primary btn-sm">Apply</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills Analysis -->
+          <div class="dashboard-card skills-analysis">
+            <div class="card-header">
+              <h2>Skills Analysis</h2>
+              <a href="profile.html" class="view-all">Update Skills</a>
+            </div>
+            <div class="card-content">
+              <div class="skills-chart">
+                <canvas id="skillsRadarChart"></canvas>
+              </div>
+              <div class="skills-recommendations">
+                <h3>Recommended Skills to Learn</h3>
+                <div class="skill-recommendation">
+                  <div class="skill-info">
+                    <span>TypeScript</span>
+                    <span class="skill-demand">High Demand</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 30%;"></div>
+                  </div>
+                  <p>Adding TypeScript will increase your match rate by 15%</p>
+                </div>
+                <div class="skill-recommendation">
+                  <div class="skill-info">
+                    <span>React Native</span>
+                    <span class="skill-demand">Growing Demand</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 0%;"></div>
+                  </div>
+                  <p>Mobile development skills are increasingly requested</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Activity -->
+          <div class="dashboard-card recent-activity">
+            <div class="card-header">
+              <h2>Recent Activity</h2>
+            </div>
+            <div class="card-content">
+              <div class="activity-list">
+                <div class="activity-item">
+                  <div class="activity-icon application">
+                    <i class="fas fa-file-alt"></i>
+                  </div>
+                  <div class="activity-details">
+                    <h4>You applied for Senior Frontend Developer</h4>
+                    <p>TechCorp • 2 days ago</p>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon interview">
+                    <i class="fas fa-calendar-alt"></i>
+                  </div>
+                  <div class="activity-details">
+                    <h4>Interview scheduled with InnovateTech</h4>
+                    <p>InnovateTech • Yesterday</p>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon message">
+                    <i class="fas fa-comments"></i>
+                  </div>
+                  <div class="activity-details">
+                    <h4>New message from Sarah Chen</h4>
+                    <p>TechCorp • 4 hours ago</p>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon profile">
+                    <i class="fas fa-eye"></i>
+                  </div>
+                  <div class="activity-details">
+                    <h4>Your profile was viewed by a recruiter</h4>
+                    <p>DesignStudio • 1 hour ago</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upcoming Interviews -->
+          <div class="dashboard-card upcoming-interviews">
+            <div class="card-header">
+              <h2>Upcoming Interviews</h2>
+              <a href="interviews.html" class="view-all">View All</a>
+            </div>
+            <div class="card-content">
+              <div class="interview-list">
+                <div class="interview-item">
+                  <div class="interview-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                  </div>
+                  <div class="interview-details">
+                    <h4>TechCorp - Senior Frontend Developer</h4>
+                    <p>Tomorrow, 10:00 AM - 11:00 AM</p>
+                    <div class="interview-actions">
+                      <button class="btn btn-outline btn-sm">Prepare</button>
+                      <button class="btn btn-primary btn-sm">Join</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="interview-item">
+                  <div class="interview-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                  </div>
+                  <div class="interview-details">
+                    <h4>InnovateTech - Full Stack Engineer</h4>
+                    <p>April 5, 2025, 2:00 PM - 3:30 PM</p>
+                    <div class="interview-actions">
+                      <button class="btn btn-outline btn-sm">Prepare</button>
+                      <button class="btn btn-outline btn-sm">Reschedule</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      document.querySelector('.sidebar').classList.add('active');
+    });
+    
+    document.getElementById('sidebarClose').addEventListener('click', function() {
+      document.querySelector('.sidebar').classList.remove('active');
+    });
+    
+    // Skills Radar Chart
+    const ctx = document.getElementById('skillsRadarChart').getContext('2d');
+    const skillsRadarChart = new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: ['React', 'JavaScript', 'CSS', 'Node.js', 'TypeScript', 'UI/UX'],
+        datasets: [
+          {
+            label: 'Your Skills',
+            data: [90, 85, 75, 60, 30, 70],
+            backgroundColor: 'rgba(108, 92, 231, 0.2)',
+            borderColor: 'rgba(108, 92, 231, 1)',
+            pointBackgroundColor: 'rgba(108, 92, 231, 1)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgba(108, 92, 231, 1)'
+          },
+          {
+            label: 'Market Demand',
+            data: [95, 90, 70, 80, 85, 65],
+            backgroundColor: 'rgba(0, 206, 201, 0.2)',
+            borderColor: 'rgba(0, 206, 201, 1)',
+            pointBackgroundColor: 'rgba(0, 206, 201, 1)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgba(0, 206, 201, 1)'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          r: {
+            angleLines: {
+              display: true
+            },
+            suggestedMin: 0,
+            suggestedMax: 100
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
+
