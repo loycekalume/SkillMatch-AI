@@ -1,0 +1,22 @@
+<!-- src/app/components/dashboard/dashboard.component.html -->
+<div class="dashboard-content">
+    <!-- Stats Cards -->
+    <div class="stats-row">
+      <app-stats-card *ngFor="let stat of statsData" [stat]="stat"></app-stats-card>
+    </div>
+  
+    <!-- Main Dashboard Sections -->
+    <div class="dashboard-grid">
+      <!-- AI Job Matches -->
+      <app-jobmatches></app-jobmatches>
+      
+      <!-- Skills Analysis -->
+      <!-- <app-skills-analysis></app-skills-analysis> -->
+      
+      <!-- Recent Activity -->
+      <!-- <app-recent-activity></app-recent-activity> -->
+      
+      <!-- Upcoming Interviews -->
+      <!-- <app-upcoming-interviews></app-upcoming-interviews> -->
+    </div>
+  </div>

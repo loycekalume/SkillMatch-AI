@@ -75,7 +75,7 @@ export class LoginComponent implements OnInit {
     } else if (email.includes('employer')) {
       return 'employer';
     } else {
-      return 'job-seeker';
+      return 'jobseeker';
     }
   }
   
