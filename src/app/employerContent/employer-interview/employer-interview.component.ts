@@ -1,3 +1,14 @@
+// import { Component } from '@angular/core';
+
+// @Component({
+//   selector: 'app-employer-interview',
+//   imports: [],
+//   templateUrl: './employer-interview.component.html',
+//   styleUrl: './employer-interview.component.css'
+// })
+// export class EmployerInterviewComponent {
+
+// }
 // modules/employer-dashboard/components/upcoming-interviews/upcoming-interviews.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -16,14 +27,14 @@ interface Interview {
 }
 
 @Component({
-  selector: 'app-interviews',
+  selector: 'app-employer-interview',
   standalone: true,
   imports: [CommonModule],
   template: `
     <div class="dashboard-card upcoming-interviews">
       <div class="card-header">
         <h2>Upcoming Interviews</h2>
-        <a routerLink="/interviews" class="view-all">View All</a>
+        <a routerLink="/employerinterviews" class="view-all">View All</a>
       </div>
       <div class="card-content">
         <div class="interview-list">
@@ -63,9 +74,9 @@ interface Interview {
       </div>
     </div>
   `,
-  styles: []
+  styleUrls:  ['../../home/home.component.css','../../jobseeker/jobseeker.component.css','../../employer-dash-board/employer-dash-board.component.css'],
 })
-export class InterviewsComponent {
+export class EmployerInterviewComponent {
   interviews: Interview[] = [
     {
       candidate: {

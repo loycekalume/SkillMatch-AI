@@ -50,6 +50,6 @@ import { CommonModule } from '@angular/common';
       </div>
     </div>
   `,
-  styles: []
+  styleUrls:  ['../../home/home.component.css','../../jobseeker/jobseeker.component.css','../../employer-dash-board/employer-dash-board.component.css'],
 })
 export class StatsComponent {}

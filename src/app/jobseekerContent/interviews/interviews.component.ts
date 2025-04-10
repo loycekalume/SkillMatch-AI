@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-interviews',
   imports: [],
   templateUrl: './interviews.component.html',
-  styleUrl: './interviews.component.css'
-})
+  styleUrls: ['../../home/home.component.css','../../jobseeker/jobseeker.component.css'],})
 export class InterviewsComponent {
 
 }

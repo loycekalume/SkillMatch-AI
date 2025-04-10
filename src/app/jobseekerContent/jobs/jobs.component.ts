@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-jobs',
   imports: [],
   templateUrl: './jobs.component.html',
-  styleUrl: './jobs.component.css'
+  styleUrls:['../../home/home.component.css','../../jobseeker/jobseeker.component.css']
 })
 export class JobsComponent {
 

@@ -1,0 +1,47 @@
+<div class="admin-job-card">
+    <div class="admin-job-card-header">
+      <div>
+        <div class="admin-job-card-title">{{job.title}}</div>
+        <div class="admin-job-card-company">
+          <div class="admin-job-card-company-logo">
+            <img [src]="job.companyLogo" [alt]="job.company + ' Logo'">
+          </div>
+          <div class="admin-job-card-company-name">{{job.company}}</div>
+        </div>
+      </div>
+      <div class="admin-job-card-status" [ngClass]="job.statusClass">{{job.status}}</div>
+    </div>
+    <div class="admin-job-card-details">
+      <div class="admin-job-card-detail">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>{{job.location}}</span>
+      </div>
+      <div class="admin-job-card-detail">
+        <i class="fas fa-dollar-sign"></i>
+        <span>{{job.salary}}</span>
+      </div>
+      <div class="admin-job-card-detail">
+        <i class="fas fa-clock"></i>
+        <span>{{job.postedTime}}</span>
+      </div>
+      <div class="admin-job-card-detail">
+        <i class="fas fa-users"></i>
+        <span>{{job.applicants}} Applicants</span>
+      </div>
+    </div>
+    <div class="admin-job-card-skills">
+      <div class="admin-job-card-skill" *ngFor="let skill of job.skills">{{skill}}</div>
+    </div>
+    <div class="admin-job-card-actions">
+      <button class="admin-btn admin-btn-outline admin-btn-sm" (click)="viewJob()">
+        <i class="fas fa-eye"></i> View
+      </button>
+      <button class="admin-btn admin-btn-outline admin-btn-sm" (click)="editJob()">
+        <i class="fas fa-edit"></i> Edit
+      </button>
+      <button class="admin-btn admin-btn-outline-primary admin-btn-sm" (click)="approveJob()">
+        <i class="fas fa-check"></i> Approve
+      </button>
+    </div>
+  </div>
+  

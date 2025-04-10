@@ -1,15 +1,17 @@
+
+
 // pages/employer-dashboard/employer-dashboard.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SidebarComponent } from '../sidebar/sidebar.component';
-import { HeaderComponent } from '../header/header.component';
-import { StatsComponent } from '../stats/stats.component';
-import { TopcandidatesComponent } from '../topcandidates/topcandidates.component';
-import { JobsComponent } from '../jobs/jobs.component';
+import { SidebarComponent } from '../employerContent/sidebar/sidebar.component';
+import { HeaderComponent } from '../employerContent/header/header.component';
+import { StatsComponent } from '../employerContent/stats/stats.component';
+import { TopcandidatesComponent } from '../employerContent/topcandidates/topcandidates.component';
 // import { HiringMetricsComponent } from '../../components/hiring-metrics/hiring-metrics.component';
-import { ApplicationsComponent } from '..//applications/applications.component';
+import { ApplicationsComponent } from '../employerContent/applications/applications.component';
 // import { RecentActivityComponent } from '../../components/recent-activity/recent-activity.component';
-import { InterviewsComponent } from '../interviews/interviews.component';
+import { EmployerInterviewComponent } from '../employerContent/employer-interview/employer-interview.component';
+import { JobsPostedComponent } from '../employerContent/jobs-posted/jobs-posted.component';
 
 @Component({
   selector: 'app-employer-dashboard',
@@ -20,11 +22,11 @@ import { InterviewsComponent } from '../interviews/interviews.component';
     HeaderComponent,
     StatsComponent,
     TopcandidatesComponent,
-    JobsComponent,
     
+    JobsPostedComponent,
     ApplicationsComponent,
     
-    InterviewsComponent
+    EmployerInterviewComponent
   ],
   template: `
     <div class="dashboard-container">
@@ -45,19 +47,19 @@ import { InterviewsComponent } from '../interviews/interviews.component';
           <!-- Main Dashboard Sections -->
           <div class="dashboard-grid">
             <app-top-candidates></app-top-candidates>
-            <app-jobs></app-jobs>
-          
+            
+          <app-jobs-posted></app-jobs-posted>
             <app-applications></app-applications>
             
-            <app-interviews></app-interviews>
+            <app-employer-interview></app-employer-interview>
           </div>
         </div>
       </main>
     </div>
   `,
-  styles: []
+  styleUrls: ['employer-dash-board.component.css','../home/home.component.css','../jobseeker/jobseeker.component.css'],
 })
-export class DashboardComponent {
+export class EmployerDashboardComponent {
   toggleSidebar(): void {
     const sidebar = document.querySelector('.sidebar');
     if (sidebar) {
@@ -65,3 +67,4 @@ export class DashboardComponent {
     }
   }
 }
+

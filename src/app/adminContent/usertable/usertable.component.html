@@ -1,0 +1,41 @@
+<div class="admin-table-container">
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Registered</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.name}}</td>
+          <td>{{user.email}}</td>
+          <td>
+            <span class="admin-badge" [ngClass]="user.roleClass">{{user.role}}</span>
+          </td>
+          <td>{{user.registered}}</td>
+          <td>
+            <span class="admin-badge" [ngClass]="user.statusClass">{{user.status}}</span>
+          </td>
+          <td>
+            <div class="admin-table-actions">
+              <button class="admin-btn admin-btn-outline admin-btn-sm" (click)="viewUser(user)">
+                <i class="fas fa-eye"></i>
+              </button>
+              <button class="admin-btn admin-btn-outline admin-btn-sm" (click)="editUser(user)">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="admin-btn admin-btn-outline admin-btn-sm" (click)="deleteUser(user)">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,1 +1,150 @@
-<p>ai-assistant works!</p>
+<div class="dashboard-content">
+    <div class="ai-assistant-container">
+      <div class="ai-assistant-sidebar">
+        <div class="ai-sidebar-header">
+          <h3>Conversation History</h3>
+          <button class="new-chat-btn">
+            <i class="fas fa-plus"></i> New Chat
+          </button>
+        </div>
+        <div class="ai-sidebar-content">
+          <div class="conversation-list">
+            <div class="conversation-item active">
+              <div class="conversation-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="conversation-info">
+                <h4>Job Search Help</h4>
+                <p>Today, 10:30 AM</p>
+              </div>
+            </div>
+            <div class="conversation-item">
+              <div class="conversation-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="conversation-info">
+                <h4>Resume Review</h4>
+                <p>Yesterday, 2:15 PM</p>
+              </div>
+            </div>
+            <div class="conversation-item">
+              <div class="conversation-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="conversation-info">
+                <h4>Interview Preparation</h4>
+                <p>Mar 30, 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="ai-assistant-main">
+        <div class="chat-container">
+          <div class="chat-messages">
+            <!-- Repeatable message blocks -->
+            <!-- AI Message -->
+            <div class="message ai-message">
+              <div class="message-avatar">
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="message-content">
+                <p>Hello! I'm your SkillMatch AI assistant. How can I help with your job search today?</p>
+                <span class="message-time">10:30 AM</span>
+              </div>
+            </div>
+  
+            <!-- User Message -->
+            <div class="message user-message">
+              <div class="message-content">
+                <p>Hi! I'm looking for frontend developer positions that match my skills.</p>
+                <span class="message-time">10:32 AM</span>
+              </div>
+              <div class="message-avatar">
+                <img src="/placeholder.svg?height=40&width=40" alt="User Avatar">
+              </div>
+            </div>
+  
+            <!-- AI Job Suggestion -->
+            <div class="message ai-message">
+              <div class="message-avatar">
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="message-content">
+                <div class="job-card-preview">
+                  <h3>Senior Frontend Developer</h3>
+                  <div class="job-company">
+                    <img src="/placeholder.svg?height=30&width=30" alt="TechCorp Logo">
+                    <span>TechCorp</span>
+                  </div>
+                  <div class="job-details">
+                    <div class="job-detail">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <span>San Francisco, CA (Remote)</span>
+                    </div>
+                    <div class="job-detail">
+                      <i class="fas fa-dollar-sign"></i>
+                      <span>$120K - $150K</span>
+                    </div>
+                    <div class="job-detail">
+                      <i class="fas fa-clock"></i>
+                      <span>Posted 2 days ago</span>
+                    </div>
+                  </div>
+                  <div class="job-description">
+                    <p>The job requires 5+ years of experience in frontend development with a focus on React. You'll be working on our flagship product and collaborating with a team of designers and backend developers.</p>
+                  </div>
+                  <div class="job-skills">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                  </div>
+                  <div class="job-match">
+                    <div class="match-label">Skills Match</div>
+                    <div class="match-percentage">95%</div>
+                    <div class="match-bar">
+                      <div class="match-progress" style="width: 95%;"></div>
+                    </div>
+                  </div>
+                  <div class="job-actions">
+                    <button class="btn btn-outline btn-sm">View Details</button>
+                    <button class="btn btn-primary btn-sm">Apply Now</button>
+                  </div>
+                </div>
+                <span class="message-time">10:36 AM</span>
+              </div>
+            </div>
+  
+            <!-- More messages continue... -->
+          </div>
+  
+          <!-- Chat Input -->
+          <div class="chat-input">
+            <div class="input-container">
+              <input type="text" placeholder="Type your message...">
+              <div class="input-actions">
+                <button class="input-action-btn">
+                  <i class="fas fa-paperclip"></i>
+                </button>
+                <button class="input-action-btn">
+                  <i class="fas fa-microphone"></i>
+                </button>
+                <button class="send-btn">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+            <div class="input-suggestions">
+              <div class="suggestion-chip">Yes, help me apply</div>
+              <div class="suggestion-chip">Show me more jobs</div>
+              <div class="suggestion-chip">What skills should I improve?</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

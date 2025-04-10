@@ -1,0 +1,32 @@
+import { Component } from "@angular/core"
+
+@Component({
+  selector: "app-users",
+  template: `
+    <div class="admin-page-title">
+      <h2>User Management</h2>
+      <p>Manage all users of the SkillMatch AI platform.</p>
+    </div>
+    <div class="admin-card">
+      <div class="admin-card-header">
+        <div class="admin-card-title">All Users</div>
+        <div class="admin-card-actions">
+          <button class="admin-btn admin-btn-primary admin-btn-sm">
+            <i class="fas fa-plus"></i> Add User
+          </button>
+        </div>
+      </div>
+      <div class="admin-card-content">
+        <app-user-table></app-user-table>
+        <app-pagination 
+          [currentPage]="1" 
+          [totalPages]="5" 
+          [totalItems]="24" 
+          [itemsPerPage]="5">
+        </app-pagination>
+      </div>
+    </div>
+  `,
+})
+export class UsersComponent {}
+

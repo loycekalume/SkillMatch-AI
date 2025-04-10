@@ -2,6 +2,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { HomeComponent } from '../../home/home.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -22,32 +23,32 @@ import { RouterModule } from '@angular/router';
         <nav class="sidebar-menu">
           <ul>
             <li [class.active]="isRouteActive('employer-dashboard')">
-              <a routerLink="/employer-dashboard">
+              <a routerLink="employer/dashboard">
                 <i class="fas fa-home"></i>
                 <span>Dashboard</span>
               </a>
             </li>
             <li [class.active]="isRouteActive('job-postings')">
-              <a routerLink="/job-postings">
+              <a routerLink="employer/job-postings">
                 <i class="fas fa-briefcase"></i>
                 <span>Job Postings</span>
               </a>
             </li>
             <li [class.active]="isRouteActive('candidates')">
-              <a routerLink="/candidates">
+              <a routerLink="employer/candidates">
                 <i class="fas fa-users"></i>
                 <span>Candidates</span>
               </a>
             </li>
             <li [class.active]="isRouteActive('applications')">
-              <a routerLink="/applications">
+              <a routerLink="employer/applications">
                 <i class="fas fa-file-alt"></i>
                 <span>Applications</span>
                 <span class="badge">12</span>
               </a>
             </li>
             <li [class.active]="isRouteActive('interviews')">
-              <a routerLink="/interviews">
+              <a routerLink="/employer/interviews">
                 <i class="fas fa-calendar-alt"></i>
                 <span>Interviews</span>
               </a>
@@ -84,7 +85,7 @@ import { RouterModule } from '@angular/router';
       </div>
     </aside>
   `,
-  styles: []
+  styleUrls: ['../../home/home.component.css','../../jobseeker/jobseeker.component.css','../../employer-dash-board/employer-dash-board.component.css'],
 })
 export class SidebarComponent {
   isActive = false;

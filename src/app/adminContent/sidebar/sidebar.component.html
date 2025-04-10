@@ -1,0 +1,40 @@
+<aside class="admin-sidebar" [ngClass]="{'collapsed': collapsed}">
+    <div class="admin-sidebar-header">
+      <div class="admin-logo">
+        <img src="/placeholder.svg?height=32&width=32" alt="SkillMatch AI Logo">
+        <span>SkillMatch Admin</span>
+      </div>
+      <button class="admin-sidebar-toggle" (click)="onToggleSidebar()">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+    </div>
+    <div class="admin-sidebar-content">
+      <nav class="admin-sidebar-menu">
+        <ul>
+          <li *ngFor="let item of menuItems" [ngClass]="{'active': item.active}">
+            <a [routerLink]="item.path">
+              <i [class]="item.icon"></i>
+              <span class="menu-text">{{item.text}}</span>
+              <span class="badge" *ngIf="item.badge">{{item.badge}}</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="admin-sidebar-footer">
+      <div class="admin-user">
+        <div class="admin-user-avatar">
+          <img src="/placeholder.svg?height=40&width=40" alt="Admin Avatar">
+        </div>
+        <div class="admin-user-info">
+          <h4>Admin User</h4>
+          <p>Super Admin</p>
+        </div>
+      </div>
+      <a href="#" class="admin-logout">
+        <i class="fas fa-sign-out-alt"></i>
+        <span>Logout</span>
+      </a>
+    </div>
+  </aside>
+  

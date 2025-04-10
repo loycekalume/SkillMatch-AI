@@ -29,7 +29,7 @@ interface StatCard {
       </div>
     </div>
   `,
-  styleUrls: ['./stats-card.component.css']
+  styleUrls: ['../../home/home.component.css','../../jobseeker/jobseeker.component.css']
 })
 export class StatsCardComponent {
   @Input() stat!: StatCard;

@@ -1,0 +1,13 @@
+<div class="admin-stat-card">
+    <div class="admin-stat-icon" [ngClass]="iconClass">
+      <i [class]="icon"></i>
+    </div>
+    <div class="admin-stat-info">
+      <div class="admin-stat-value">{{value}}</div>
+      <div class="admin-stat-label">{{label}}</div>
+      <div class="admin-stat-change" [ngClass]="changeDirection">
+        <i [class]="changeDirection === 'positive' ? 'fas fa-arrow-up' : 'fas fa-arrow-down'"></i> {{changeValue}}
+      </div>
+    </div>
+  </div>
+  

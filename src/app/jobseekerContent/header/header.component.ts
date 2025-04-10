@@ -2,13 +2,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { JdataService, User } from '../../services/jdata.service';
+import { HomeComponent } from '../../home/home.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['../../home/home.component.css','../../jobseeker/jobseeker.component.css']
 })
 export class HeaderComponent implements OnInit {
   user!: User;

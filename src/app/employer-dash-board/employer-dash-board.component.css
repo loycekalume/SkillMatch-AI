@@ -1,0 +1,497 @@
+/* Employer Dashboard Styles */
+
+/* Action Button */
+.action-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .post-job-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    font-weight: 500;
+  }
+  
+  /* Candidate Cards */
+  .candidate-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .candidate-card {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    transition: var(--transition);
+  }
+  
+  .candidate-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+  }
+  
+  .candidate-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .candidate-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .candidate-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .candidate-info {
+    flex: 1;
+  }
+  
+  .candidate-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+  
+  .candidate-info p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 5px;
+  }
+  
+  .candidate-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+  }
+  
+  .match-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--success-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .candidate-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .skill-tag {
+    background-color: rgba(108, 92, 231, 0.1);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .candidate-experience {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 15px;
+  }
+  
+  .candidate-footer {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Job Posting List */
+  .job-posting-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .job-posting-item {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr auto auto;
+    gap: 20px;
+    align-items: center;
+    transition: var(--transition);
+  }
+  
+  .job-posting-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .job-posting-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .job-posting-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+  }
+  
+  .job-posting-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .job-posting-stats {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .job-stat {
+    text-align: center;
+  }
+  
+  .job-stat-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .job-stat-label {
+    font-size: 0.8rem;
+    color: var(--text-light);
+  }
+  
+  .job-posting-status {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .job-posting-status.active {
+    background-color: rgba(0, 184, 148, 0.1);
+    color: var(--success-color);
+  }
+  
+  .job-posting-status.paused {
+    background-color: rgba(253, 203, 110, 0.1);
+    color: var(--warning-color);
+  }
+  
+  .job-posting-status.closed {
+    background-color: rgba(214, 48, 49, 0.1);
+    color: var(--danger-color);
+  }
+  
+  .job-posting-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Hiring Metrics */
+  .time-filter select {
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    background-color: white;
+  }
+  
+  .metrics-chart {
+    height: 250px;
+    margin-bottom: 20px;
+  }
+  
+  .metrics-summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .metric-item {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+  }
+  
+  .metric-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+  }
+  
+  .metric-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 10px;
+  }
+  
+  .metric-trend {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .metric-trend.positive {
+    color: var(--success-color);
+  }
+  
+  .metric-trend.negative {
+    color: var(--danger-color);
+  }
+  
+  /* Application Funnel */
+  .funnel-chart {
+    margin-bottom: 20px;
+  }
+  
+  .funnel-stage {
+    margin-bottom: 15px;
+  }
+  
+  .funnel-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .funnel-bar {
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .funnel-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    border-radius: 5px;
+  }
+  
+  .funnel-insights {
+    background-color: var(--bg-light);
+    padding: 15px;
+    border-radius: var(--border-radius);
+  }
+  
+  .funnel-insights h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+  }
+  
+  .funnel-insights ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .funnel-insights li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .funnel-insights li i {
+    color: var(--primary-color);
+    margin-top: 3px;
+  }
+  
+  /* Interview List */
+  .interview-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .interview-item {
+    display: flex;
+    gap: 20px;
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+    padding: 15px;
+  }
+  
+  .interview-time {
+    text-align: center;
+    min-width: 80px;
+  }
+  
+  .interview-date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .interview-hour {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+  
+  .interview-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .interview-candidate {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .interview-candidate img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .interview-candidate h4 {
+    font-size: 1rem;
+    margin-bottom: 3px;
+  }
+  
+  .interview-candidate p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+  }
+  
+  .interview-type {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+  }
+  
+  .interview-badge {
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+  
+  .interview-badge.technical {
+    background-color: rgba(108, 92, 231, 0.1);
+    color: var(--primary-color);
+  }
+  
+  .interview-badge.cultural {
+    background-color: rgba(0, 206, 201, 0.1);
+    color: var(--secondary-color);
+  }
+  
+  .interview-participants {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+  }
+  
+  .participant-avatars {
+    display: flex;
+  }
+  
+  .participant-avatars img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: -10px;
+  }
+  
+  .participant-avatars img:first-child {
+    margin-left: 0;
+  }
+  
+  .interview-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .candidate-cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .job-posting-item {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  
+    .job-posting-stats {
+      justify-content: space-between;
+    }
+  
+    .metrics-summary {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .interview-item {
+      flex-direction: column;
+    }
+  
+    .interview-time {
+      display: flex;
+      justify-content: space-between;
+      min-width: auto;
+    }
+  
+    .interview-actions {
+      flex-direction: row;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .job-posting-meta {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .interview-actions {
+      flex-direction: column;
+    }
+  }
+  
+  

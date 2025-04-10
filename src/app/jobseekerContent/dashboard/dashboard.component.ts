@@ -3,10 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterModule } from '@angular/router';
 import { JdataService } from '../../services/jdata.service';
+import { HomeComponent } from '../../home/home.component';
 
 // Import sub-components of the dashboard
 import { StatsCardComponent } from '../stats-card/stats-card.component';
 import { JobmatchesComponent } from '../jobmatches/jobmatches.component';
+import { JobseekerComponent } from '../../jobseeker/jobseeker.component';
 // import { SkillsAnalysisComponent } from '../../../components/skills-analysis/skills-analysis.component';
 // import { RecentActivityComponent } from '../../../components/recent-activity/recent-activity.component';
 // import { UpcomingInterviewsComponent } from '../../../components/upcoming-interviews/upcoming-interviews.component';
@@ -25,7 +27,7 @@ import { JobmatchesComponent } from '../jobmatches/jobmatches.component';
     // UpcomingInterviewsComponent
   ],
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css','../../home/home.component.css','../../jobseeker/jobseeker.component.css'],
 })
 export class DashboardComponent implements OnInit {
   statsData: any[] = [];

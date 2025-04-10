@@ -1,3 +1,14 @@
+// import { Component } from '@angular/core';
+
+// @Component({
+//   selector: 'app-jobs-posted',
+//   imports: [],
+//   templateUrl: './jobs-posted.component.html',
+//   styleUrl: './jobs-posted.component.css'
+// })
+// export class JobsPostedComponent {
+
+// }
 // components/job-postings/job-postings.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,7 +25,7 @@ interface JobPosting {
 }
 
 @Component({
-  selector: 'app-jobs',
+  selector: 'app-jobs-posted',
   standalone: true,
   imports: [CommonModule],
   template: `
@@ -59,9 +70,9 @@ interface JobPosting {
       </div>
     </div>
   `,
-  styles: []
+  styleUrls:  ['../../home/home.component.css','../../jobseeker/jobseeker.component.css','../../employer-dash-board/employer-dash-board.component.css'],
 })
-export class JobsComponent {
+export class JobsPostedComponent {
   jobs: JobPosting[] = [
     {
       title: 'Senior Frontend Developer',

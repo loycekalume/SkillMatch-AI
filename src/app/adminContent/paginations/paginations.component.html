@@ -1,0 +1,27 @@
+<div class="admin-pagination">
+    <div class="admin-pagination-info">
+      Showing {{startItem}} to {{endItem}} of {{totalItems}} entries
+    </div>
+    <div class="admin-pagination-buttons">
+      <button 
+        class="admin-pagination-button" 
+        [ngClass]="{'disabled': currentPage === 1}"
+        (click)="changePage(currentPage - 1)">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button 
+        *ngFor="let page of pages" 
+        class="admin-pagination-button" 
+        [ngClass]="{'active': page === currentPage}"
+        (click)="changePage(page)">
+        {{page}}
+      </button>
+      <button 
+        class="admin-pagination-button" 
+        [ngClass]="{'disabled': currentPage === totalPages}"
+        (click)="changePage(currentPage + 1)">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+  
